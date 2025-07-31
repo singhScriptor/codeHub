@@ -87,6 +87,51 @@ console.log(5 >> 1)
 console.log(5^2)
 
 
+function numberToBinary(num){
+    let binary=''
+    while(num >0){
+        binary=num%2+binary
+        num=Math.floor(num/2)
+    }
+    return binary
+}
+let num=7
+console.log(numberToBinary(num))
+
+
+function binarytoNum(binary){
+    let num=0
+    for (let i of binary){
+        num=num*2+parseInt(i)
+    }
+    return num
+}
+let nv='111'
+console.log(binarytoNum(nv))
+
+
+function binaryTONumber(binary){
+    let num=0
+    for(let i of binary){
+        num=num*2+parseInt(i)
+
+    }
+    return num
+}
+let ni='1111'
+console.log(binaryTONumber(ni))
+
+
+function numberTObinary(num){
+    let bin=''
+    while(num > 0){
+        bin=num%2+bin
+        num=Math.floor(num/2)
+    }
+    return bin
+}
+let nm=15
+console.log(numberTObinary(nm))
 
 
 
