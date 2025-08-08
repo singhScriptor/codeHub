@@ -12,3 +12,24 @@ function divideTwoInt(dividend,divisor){
 }
 let dividend=10,divisor=3
 console.log(divideTwoInt(dividend,divisor))
+
+
+let s="hello world"
+console.log(s.includes('hello'))
+
+// ans=s.split(' ')
+// console.log(ans)
+
+function doSplit(s){
+    let word=''
+    for(let i of s){
+        if(i === ' '){
+            break
+        }
+        else{
+            word+=i
+        }
+    }
+    console.log(word)
+}
+doSplit(s)
