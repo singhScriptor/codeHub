@@ -5,11 +5,11 @@ let rotateListNode=function(head,k){
         temp=temp.next
         len++
     }
-    k=len-(k%10)
+    k=len-(k%len)
     temp.next=head
     while(k>0){
         temp=temp.next
-        len--
+        k--
     }
     head=temp.next
     temp.next=null
