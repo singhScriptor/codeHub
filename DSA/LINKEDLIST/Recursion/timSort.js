@@ -39,3 +39,5 @@ function timSort(arr){
     }
     return arr
 }
+let arr=[1,5,3,4,2]
+console.log(timSort(arr))
