@@ -5,11 +5,9 @@ let validateStackSequence=(pushed,popped)=>{
         while(stack.length && stack[stack.length-1]===popped[0]){
             stack.pop()
             popped.shift()
-            
         }
     }
     return stack.length === 0
-    
 }
 let pushed=[1,2,3,4,5],popped=[4,5,3,2,1]
 console.log(validateStackSequence(pushed,popped))

@@ -14,3 +14,21 @@ function nextGreaterElement(nums){
 }
 let num=[1,2,1]
 console.log(nextGreaterElement(num))
+
+
+let nxtGrterElem=function(nums){
+    let arr=new Array(nums.length)
+    for(let i=0;i<arr.length;i++){
+        arr[i]=-1
+        for(let j=1;j<arr.length;j++){
+            let index=(i+j)%nums.length
+            if(nums[i]<nums[index]){
+                arr[i]=nums[index]
+                break
+            }
+        }
+    }
+    return arr
+}
+let nums=[1,2,1]
+console.log(nxtGrterElem(nums))
