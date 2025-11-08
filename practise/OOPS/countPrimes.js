@@ -35,3 +35,4 @@ let CountPPrimes=function(n){
 }
 let  v=10
 console.log(CountPPrimes(v))  
+

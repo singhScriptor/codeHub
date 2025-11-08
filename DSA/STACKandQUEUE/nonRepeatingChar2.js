@@ -1,4 +1,4 @@
-function nonRepeatCHar(A){
+ function nonRepeatCHar(A){
     let freq=new Array(26).fill(0)
     let res='',queue=[]
     for(let i of A){
