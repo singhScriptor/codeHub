@@ -1,0 +1,18 @@
+.header-div{
+    background: linear-gradient(to right, #A8E6CF, #D0EFFF, #30ade3);
+    padding:10px;
+}
+
+.header-div2{
+    background: linear-gradient(to right, #7171ec, rgb(34, 43, 25));
+    padding: 10px;
+}
+
+.submit{
+    background: linear-gradient(to right, skyblue, rgb(196, 173, 173), purple);
+}
+
+.result-header{
+    background: linear-gradient(to right,#7171ec, rgb(34, 43, 25) );
+    padding: 10px;
+}

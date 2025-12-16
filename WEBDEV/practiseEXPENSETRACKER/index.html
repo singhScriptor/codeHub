@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense_Tracker</title>
+</head>
+<body>
+    <div class="container text-center" id="header">
+        <h1 id="h1">Expense Tracker</h1>  
+    </div>
+    <div class="container" id="mainDiv">
+    <main>
+ 
+        <div class="container" id="budget">
+            <div class="container" id="bal-div">
+                <h2 id="balance">Balance :</h2>
+            </div>
+            <div class="container" id="incomeExpense">
+                <h2 id="totalincome">Total Income:</h2>
+                <h2 id="totalexpense">Total Expense:</h2>
+            </div>
+            <div class="container" id="income-div" >
+                <input type="number" id="income" name="totalincome" placeholder="Add-Budget" required>
+                <button type="submit" id="add">ADD</button>
+            </div>
+        </div>
+        <div class="container" id="expense">
+            <h2 id="addExpense">Add New</h2>
+            <input type="number" id="amount" placeholder="Expense" required>
+            <input type="text" id="description" placeholder="description" required>
+            <select name="category" id="category" required>
+                <option value="">--Select Category--</option>
+                <option value="Transport">Transport</option>
+                <option value="dining">Dining</option>
+                <option value="shopping">Shopping</option>
+                <option value="grocery">Grocery</option>
+            </select>
+            <button type="submit" id="addexp">Add Expense</button>
+        </div>
+    </main>
+    <aside id="output">
+        <div class="container" id="output-h1">
+            <h1 id="added">Added List</h1>
+        </div>
+        <div class="container" id="outputdiv">
+            <ul id="outputul"></ul>
+        </div>
+    </aside>
+    </div>
+    <footer>
+        <p>thank you visit again</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
