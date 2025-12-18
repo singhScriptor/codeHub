@@ -11,3 +11,12 @@ function hexaDecimals(num){
 }
 let num=-1
 console.log(hexaDecimals(num))
+
+function hex(nums){
+    if(nums===0)return '0'
+    if(nums < 0) nums+=0xffffffff+1
+    return nums.toString(16)
+
+}
+let n=-1
+console.log(hex(n))
