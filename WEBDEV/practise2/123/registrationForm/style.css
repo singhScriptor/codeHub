@@ -1,0 +1,43 @@
+body{
+    background-image:url(Copilot_20251219_222813.png) ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+div{
+    border:2px solid gold;
+    border-radius: 5px;
+    padding: 10px;
+    width: 550px;
+    margin:0;
+    background-color: white;
+}
+h1,p{
+    text-align: center;
+}
+h1{
+    color: goldenrod;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+.date,.time{
+    width: 47%;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color:gold;
+    margin: 5px;
+}

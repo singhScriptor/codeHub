@@ -1,0 +1,36 @@
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+
+
+form{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input{
+    padding: 10px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 2px solid pink;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+button{
+    background-color: blueviolet;
+    padding: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    width: 100%;
+}
