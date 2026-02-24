@@ -32,3 +32,6 @@ let minSwap=function(arr){
 }
 let arr=[2,8,5,4]
 console.log(minSwap(arr))
+
+
+

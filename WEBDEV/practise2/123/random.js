@@ -168,13 +168,151 @@ clousres,settimeout,ES6Features
 //     console.log()
 // }
 
-a()// "hey there"
-b()// type error cause b is not a function 
-function a(){
-    console.log('Hey There')
-}
+// a()// "hey there"
+// b()// type error cause b is not a function 
+// function a(){
+//     console.log('Hey There')
+// }
 
-var b=function(){
-    console.log('Hey man')
+// var b=function(){
+//     console.log('Hey man')
+// }
+// //b()
+// function a(){
+//     console.log('inside a')
+// }
+// var b=function abc(){
+//     console.log('inside b')
+// }
+// a()
+// abc()// this will be give reference error 
+
+
+// function fun(a){
+//     console.log(a)
+// }
+// var b=10
+// fun(b)
+
+// function fun1(){
+
+// console.log('a')
+
+// return () => {
+
+// console.log('b')
+
+// }}
+
+// fun1()()
+
+// function sum(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
+// console.log(sum(1)(2)(3))
+
+// function fun1(a){
+//     const fun2=(b)=>{
+//         a=a+b
+//         console.log(a)
+//     }
+// }
+// fun1(10)(30)
+
+// class Student{
+//     static count=0
+//     constructor(name,age,phone,marks){
+//         this.name=name
+//         this.age=age
+//         this.phone=phone
+//         this.marks=marks
+//     }
+//     increaseStudentCount(){
+//         Student.count++
+//     }
+//     printStudentCount(){
+//         console.log(Student.count)
+//     }
+// }
+
+
+// function x(y){
+//     console.log('inside x')
+//     y()
+// }
+// x(function y(){
+//     console.log('inside y')
+// })
+
+// var fun=a=>a
+// var a=10
+// console.log(fun(a))
+
+// let name=str=>str
+// let str='DRJ'
+// console.log(name(str))
+
+// var fun=a=>a
+// var a=10
+// console.log(fun(a))// output will be 10
+
+// var fun=a=>a
+// console.log(fun(a))
+// var a=10//undefined
+
+// var fun=a=>{a}
+// var a=10
+// console.log(fun(a))// undefined
+
+// var fun=(a,b)=>{
+//     var sum=a+b
+//     return sum
+// }
+// var a=10,b=20
+// console.log(fun(a,b))
+
+// var fun=(a,b)=>
+//     var sum=a+b
+//     return sum
+//     var a=10
+//     var b=20
+
+// var student=function(name){
+//     this.name=name
+//     function print(){
+//         console.log(this.name)
+//     }
+//     print()
+// }
+// var y=new student('Yash')
+// console.log(y)
+
+// var student = function(name){
+
+//   this.name = name;
+
+//   function printName() {
+
+//     console.log(this.name)
+
+//   }
+
+//    printName()
+
+// }
+
+// var yash = new student("yash")
+
+
+var student=function(name){
+    this.name=name
+    var printName=()=>{
+        console.log(this.name)
+    }
+    printName()
 }
-//b()
+var yash=new student('yash')

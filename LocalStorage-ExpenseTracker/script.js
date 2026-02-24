@@ -30,7 +30,7 @@ function addDetails(e){
 function showDetails(expenseDetails){
     let list=document.createElement('li')
     list.id=`list-${expenseDetails.key}`
-    list.className="bg-secondary border-info shadow-lg rounded p-2  m-2 border border-info rounded list-unstyled"
+    list.className="bg-secondary border-info shadow-lg rounded p-2  m-2 border border-info rounded list-unstyled "
     list.innerHTML=`<strong>Info :</strong>${expenseDetails.description},<strong>Category :</strong>${expenseDetails.option},<strong>Price :</strong>${expenseDetails.price} `
 
     //add button 
