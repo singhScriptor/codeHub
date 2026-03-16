@@ -1,0 +1,11 @@
+body{
+    background-image: url(v1016-b-09.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+html,body{
+    height: 100%;
+    margin:0;
+}
+
