@@ -5,6 +5,9 @@ function secondMaximum(arr){
             secondMaxi=maxi
             maxi=arr[i]
         }
+        else if(arr[i] > secondMaxi && arr[i] < maxi){
+            secondMaxi=arr[i]
+        }
     }
     return secondMaxi
 }

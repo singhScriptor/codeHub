@@ -6,6 +6,8 @@ form.addEventListener('submit',addTodoList)
 
 let userList=document.getElementsByTagName('ul')[0]
 
+let API_Link=`https://crudcrud.com/api/eb88395154ea46129d896be158d75c6d/todoDetails`
+
 function addTodoList(event){
     event.preventDefault()
     let todoDetails={
@@ -20,7 +22,7 @@ function addTodoList(event){
 
 async function submitToDo(todoDetails) {
     try{
-        let res=await axios.post(`https://crudcrud.com/api/fccdb0e23e68434aaea1cb3e4a46ec6a/todoDetails`,todoDetails)
+        let res=await axios.post(API_Link,todoDetails)
         console.log(res.data)
         let details=res.data
         let id=details._id
@@ -78,12 +80,16 @@ async function editfunction(details,list,id) {
             try{
                 e.preventDefault()
 
-                details.task=document.getElementsByClassName('name')[0].value;
-                details.description=document.getElementsByClassName('description')[0].value;
+                let updatedDetails = {
+                    task: document.getElementsByClassName('name')[0].value,
+                    description: document.getElementsByClassName('description')[0].value
 
-                axios.put(`https://crudcrud.com/api/fccdb0e23e68434aaea1cb3e4a46ec6a/todoDetails/${id}`,details)
+                }
 
-                list.innerHTML=`To-Do: ${details.task}, Description: ${details.description}`
+
+                axios.put(`${API_Link}/${id}`,updatedDetails)
+
+                list.innerHTML=`To-Do: ${updatedDetails.task}, Description: ${updatedDetails.description}`
 
                 let editBtn=document.createElement('button')
                 editBtn.className='edt-btn bg-transparent text-black rounded border-0 ms-auto p-1'
@@ -97,7 +103,7 @@ async function editfunction(details,list,id) {
 
                 editBtn.addEventListener('click',function(e){
                     e.preventDefault()
-                    editfunction(details,list,id)
+                    editfunction(updatedDetails,list,id)
                 })
 
                 delBtn.addEventListener('click',function(e){
@@ -121,7 +127,7 @@ async function editfunction(details,list,id) {
 
 async function deleteFunction(list,id){
     try{
-        await axios.delete(`https://crudcrud.com/api/fccdb0e23e68434aaea1cb3e4a46ec6a/todoDetails/${id}`)
+        await axios.delete(`${API_Link}/${id}`)
         list.remove()
     }
     catch(err){
@@ -129,10 +135,9 @@ async function deleteFunction(list,id){
     }
 }
 
-async function reload(event) {
+async function reload() {
     try{
-        event.preventDefault()
-        let res=await axios.get(`https://crudcrud.com/api/fccdb0e23e68434aaea1cb3e4a46ec6a/todoDetails`)
+        let res=await axios.get(`${API_Link}`)
         let data=res.data
         data.forEach(element => {
             displayTodo(element,element._id)
